@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neighborhood Map</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="options-box">
+      <h1 style="color: rgb(0, 185, 231);">Neighborhood Map</h1>
+      <div>
+
+        <input id="filter" type="button" value="Filter" data-bind="click:filter">
+        <input id="filter_field" type="text" data-bind="value:filteredField ,text: filteredField">
+        <div data-bind="foreach: LiveLocations">
+          <h4 data-bind="text: title,click:$parent.toggleBounce">
+
+          </h4>
+        </div>
+
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  </div>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT2NS5t6kMotS_tTuVQAX16FNKwe3H3To&v=3&callback=bind">
+  </script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/knockout-3.4.2.js"></script>
+  <script src="js/app.js"></script>
+
+
+
+</body>
+
+</html>
