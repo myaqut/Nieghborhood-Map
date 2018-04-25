@@ -195,7 +195,9 @@ var ViewModel = function () {
   this.initMap();
 
 }
-
+function gotERROR(){
+  aler("can't load Google map");
+}
 function bind() {
   ko.applyBindings(new ViewModel());
 }
